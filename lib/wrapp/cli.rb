@@ -21,6 +21,13 @@ module Wrapp
       :short => '-n NAME',
       :description => "Volume name of the newly created filesystem."
 
+    option :add_applications_link,
+      :long => '--add-applications-link',
+      :short => '-l',
+      :description => 'Add /Applications symlink to the DMG.',
+      :boolean => true,
+      :default => true
+
     class << self
       def run
         new.run(ARGV)
